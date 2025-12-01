@@ -1,0 +1,61 @@
+@mixin box-styling{
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
+        background-color: #112055;
+        color: #fff;
+}
+
+$primaryColor: #112055;
+$secondaryColor: #4f9d92;
+
+.box__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  font-family: sans-serif;
+
+            cursor: pointer;/* I added the cursor to be a hand */
+            .box-primary{ /* I am nesting the box-primary within the box wrapper  */
+                @include box-styling();
+                        &:hover{
+                        background-color: $primaryColor;
+                        box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
+                                }
+                                &:active{
+                                transform: scale(0.9);
+                                }
+                                &-lighter { /*primary lighter*/
+                                @extend .box-primary;
+                                background-color: $primaryColor;
+                                &:active{
+                                    background-color: lighten($primaryColor, 20%)
+                                    }
+                                }
+                            &-darker { /*primary darker*/
+                                @extend .box-primary;
+                                background-color: $primaryColor;
+                                &:active{
+                                    background-color:darken($primaryColor, 20%)
+                                    }
+                                }
+                    }
+                }
+        
+            .box-secondary{ /*nesting box-secondary within the box wrapper */
+                    @include box-styling();
+                        &:hover{
+                        background-color: $secondaryColor;
+                        box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3); 
+                    }
+                    &:active{
+                            transform: scale(0.9);
+                            background-color:darken($secondaryColor, 20%)
+                    }
+                }
+            
+
+                /*I ddidnt manage to master this thing yet // Try again!!!
+                https://careerfoundry.wistia.com/medias/az0ui7t0ek 
+                */

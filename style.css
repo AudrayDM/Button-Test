@@ -1,0 +1,52 @@
+.box__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  font-family: sans-serif;
+  cursor: pointer; /* I added the cursor to be a hand */
+}
+.box__wrapper .box-primary, .box__wrapper .box-primary-darker, .box__wrapper .box-primary-lighter { /* I am nesting the box-primary within the box wrapper  */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 4px 3px 19px 0px rgba(0, 0, 0, 0.3);
+  background-color: #112055;
+  color: #fff;
+}
+.box__wrapper .box-primary:hover, .box__wrapper .box-primary-darker:hover, .box__wrapper .box-primary-lighter:hover {
+  background-color: #112055;
+  box-shadow: 4px 3px 19px 0px rgba(0, 0, 0, 0.3);
+}
+.box__wrapper .box-primary:active, .box__wrapper .box-primary-darker:active, .box__wrapper .box-primary-lighter:active {
+  transform: scale(0.9);
+}
+.box__wrapper .box-primary-lighter { /*primary lighter*/
+  background-color: #112055;
+}
+.box__wrapper .box-primary-lighter:active {
+  background-color: #2240aa;
+}
+.box__wrapper .box-primary-darker { /*primary darker*/
+  background-color: #112055;
+}
+.box__wrapper .box-primary-darker:active {
+  background-color: black;
+}
+
+.box-secondary { /*nesting box-secondary within the box wrapper */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 4px 3px 19px 0px rgba(0, 0, 0, 0.3);
+  background-color: #112055;
+  color: #fff;
+}
+.box-secondary:hover {
+  background-color: #4f9d92;
+  box-shadow: 4px 3px 19px 0px rgba(0, 0, 0, 0.3);
+}
+.box-secondary:active {
+  transform: scale(0.9);
+  background-color: rgb(44.8559322034, 89.1440677966, 82.8983050847);
+}
+
+/*https://sass-lang.com/playground/#eJwzNAQAAJUAYw==*/
